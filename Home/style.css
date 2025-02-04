@@ -5,8 +5,104 @@
 }
 
 body{
-    background-color: gray;
+    background-color: white;
 }
+
+/* Home Content */
+.categories:has(input[type="radio"]:checked) ~ #home-content{
+    display: none;
+}
+
+/* Men's Outerwear Section */
+#mens-outerwear-content{
+    display: none;
+}
+
+.categories:has(#mens_outerwear:checked) ~ #mens-outerwear-content{
+    display: block;
+}
+/* Men's Outerwear Section End*/
+
+/* Ladies Outerwear Section */
+#ladies-outerwear-content{
+    display: none;
+}
+.categories:has(#ladies_outerwear:checked) ~ #ladies-outerwear-content{
+    display: block;
+}
+/* Ladies Outerwear Section End*/
+
+/* Men's Tshirts Section */
+#mens-tshirts-content{
+    display: none;
+}
+
+.categories:has(#mens_tshirts:checked) ~ #mens-tshirts-content{
+    display: block;
+}
+/* Men's Tshirts Section End*/
+
+/* Ladies Tshirts Section */
+#ladies-tshirts-content{
+    display: none;
+}
+
+.categories:has(#ladies_tshirts:checked) ~ #ladies-tshirts-content{
+    display: block;
+}
+/* Ladies Tshirts Section End*/
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 325px;
+}
+
+:is(.mens-outerwear-content , .home-content) > .banner {
+    background: url("../resource/mens_outerwear.jpg") no-repeat center/cover;
+}
+
+.ladies-outerwear-content > .banner {
+    background: url("../resource/ladies_outerwear.jpg") no-repeat center/cover;
+}
+
+.mens-tshirts-content > .banner {
+    background: url("../resource/mens_tshirts.jpg") no-repeat center/cover;
+}
+
+.ladies-tshirts-content > .banner {
+    background: url("../resource/ladies_tshirts.jpg") no-repeat center/cover;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: white;
+}
+
+#footer-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: gray;
+}
+
+#footer-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    align-items: center;
+    background: rgb(24, 24, 24);
+    color: white;
+}
+
 
 @media (min-width: 768px) {
     .container{
@@ -83,11 +179,8 @@ body{
         border-bottom: 2px solid black;
     }
 
-    #banner {
-        position: relative;
-        width: 100%;
-        height: 325px;
-        background: url("../resource/mens_outerwear.jpg") no-repeat center/cover;
+    .category:has(input[type="radio"]:checked) {
+        border-bottom: 2px solid black;
     }
 
     #mens-outerwear{
@@ -162,32 +255,82 @@ body{
         width: 50%;
     }
 
-    #footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 60px;
-        background: white;
+    .grid{
+        width: 90%;
+        padding-inline: 5%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
+}
 
-    #footer-heading{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-        color: gray;
-    }
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
 
-    #footer-button{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 120px;
-        height: 35px;
-        align-items: center;
-        background: rgb(24, 24, 24);
-        color: white;
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background: white;
+    color: grey;
+}
+
+.quantity>p{
+    font-size: 12px;
+}
+
+/* Card content */
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Outfit image */
+.outfit-img {
+    width: 60%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #ddd; /* Placeholder color */
+}
+
+/* Outfit name */
+.outfit-name {
+    padding-top: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+}
+
+.outfit-price{
+    color: grey;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@media (max-width : 767px) {
+
+    .grid{
+        width: 90%;
+        padding-inline: 5%;
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        gap: 5px;
     }
 }
