@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     padding: 0%;
     margin: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 body{
+    position: relative;
+    top:-2px;
     background-color: white;
 }
 
@@ -16,10 +20,15 @@ body{
     display: none;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 #header{
     display: flex;
     width: 100%;
-    height: 75px;
+    height: 70px;
     justify-content: space-between;
     align-items: center;
     background-color: white;
@@ -156,6 +165,7 @@ body{
     .shop-name{
         text-decoration: none;
         color: black;
+        letter-spacing: 5px;
         cursor: pointer;
     }
 
@@ -178,7 +188,7 @@ body{
         align-items: center;
         background-color: white;
         color: black;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .category{
@@ -188,16 +198,12 @@ body{
         height:40px;
         margin: 10px;
         padding-inline: 10px;
-        font-weight: 500;
+        font-weight: 350;
         cursor: pointer;
     }
 
     .category input[type="radio"]  {
         display: none;
-    }
-
-    .category:has(input[type="radio"]:checked) {
-        border-bottom: 2px solid black;
     }
 
     .category:has(input[type="radio"]:checked) {
@@ -406,7 +412,7 @@ body{
     }
 
     .bar{
-        height: 1px;
+        height: 2px;
         width: 20px;
         background-color: black;
     }
@@ -427,6 +433,78 @@ body{
     #checkbox:checked ~ .toggle-menu div:nth-child(3){
         transform: rotate(45deg);
         top:50%;
+    } 
+
+    #mens-outerwear{
+        display: flex;
+        height:150px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        z-index: 1;
+    }
+
+    #mens-outerwear{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height:150px;
+        width: 100%;
+    }
+
+    button{
+        height: 40px;
+        width: 175px;
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+        cursor: pointer;
+    }
+
+    #banner-1 {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background: url("../resource/ladies_outerwear.jpg") no-repeat center/cover;
+    }
+
+    .banner3{
+        display: flex;
+        width: 100%;
+        height: 250;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-1{
+        position: relative;
+        width: 50%;
+        height: 250px;
+        background: url("../resource/mens_tshirts.jpg") no-repeat center/cover;
+    }
+
+    .image-2{
+        width: 50%;
+        height: 250px;
+        background: url("../resource/ladies_tshirts.jpg") no-repeat center/cover;
+    }
+
+    #buttons{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        background: white;
+    }
+
+    .mens-tshirts, .ladies-tshirts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height:150px;
+        width: 50%;
     }
 
     /* .toggle-menu{

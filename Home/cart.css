@@ -1,0 +1,151 @@
+
+.cart-heading{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (min-width: 768px) {
+    #categories{
+        display: none;
+    }
+
+    .cart-heading{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+        height: 10vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart-heading p:nth-child(2){
+        color: gray;
+        font-size: 12px;
+    }
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.out-wear{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+
+.item-details {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    gap: 20px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.product-name {
+    font-size: 16px;
+    color: black;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 14px;
+    color: gray;
+    margin: 5px 0;
+}
+
+.product-size, .product-quantity {
+    padding: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 15px;
+    color: black;
+}
+
+.product-name{
+    font-size: 16px;
+    font-weight: 400;
+}
+.cart-total > :is(p, span){
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 20px;
+    padding-top: 10px;
+    padding-inline:20%;
+}
+
+select{
+    border: none;
+}
+
+@media (max-width: 767px){
+
+    .cart-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap:10px;
+        width: 90%;
+    }
+
+    .total > button{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100vw;
+        background: #172C50;
+        border: none;
+        height: 60px;
+        color: white;
+    }
+}
