@@ -8,7 +8,10 @@
     align-items: center;
 }
 
-
+.cart-heading p:nth-child(2){
+    color: gray;
+    font-size: 12px;
+}
 
 @media (min-width: 768px) {
     #categories{
@@ -24,11 +27,6 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-    }
-
-    .cart-heading p:nth-child(2){
-        color: gray;
-        font-size: 12px;
     }
 }
 
@@ -67,12 +65,22 @@ h2 {
     margin-right: 15px;
 }
 
+.qty{
+    display: flex;
+}
+
+.cross{
+    position: relative;
+    font-size: 28px;
+    transform: rotate(45deg);
+    top:-5px;
+}
+
 
 .item-details {
     display: flex;
     width: 30%;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
     color: grey;
     font-size: 12px;
     font-weight: 300;
@@ -127,6 +135,12 @@ select{
     border: none;
 }
 
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 767px){
 
     .cart-item {
@@ -138,8 +152,19 @@ select{
         width: 90%;
     }
 
-    .total > button{
-        position: absolute;
+    .item-details {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        color: grey;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .total > :is(button , .button){
+        position: fixed;
+        justify-content: center;
+        align-items: center;
         left: 0px;
         bottom: 0px;
         width: 100vw;

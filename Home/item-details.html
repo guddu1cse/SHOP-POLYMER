@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME -Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./item-details.css">
+
+</head>
+<body>
+   <div class="container">
+    <header class="header" id="header">
+        <div class="header-content logo">
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="toggle-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+            </div>
+        </div>
+        <a href="./index.html" class="header-content shop-name" >
+            <h4>SHOP</h4>
+        </a>
+
+        <div class="header-content cart">
+            <a href="./cart.html" class="cart">
+                <div class="cart-icon">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></g></svg>
+                   </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="categories" id="categories">
+        <label class="category">
+            <input type="radio" id="mens_outerwear" name="category" value="Men's Outerwear">
+            <span>Men's Outerwear</span>
+        </label>
+    
+        <label class="category">
+            <input type="radio" id="ladies_outerwear" name="category" value="Ladies Outerwear">
+            <span>Ladies Outerwear</span>
+        </label>
+    
+        <label class="category">
+            <input type="radio" id="mens_tshirts" name="category" value="Men's T-Shirts">
+            <span>Men's T-Shirts</span>
+        </label>
+    
+        <label class="category">
+            <input type="radio" id="ladies_tshirts" name="category" value="Ladies T-Shirts">
+            <span>Ladies T-Shirts</span>
+        </label>
+    </div>
+
+    <div class="single-item-main-container">
+
+        <div class="single-item-sub-container">
+
+
+            <div class="single-img-container">
+                <img class="single-img" src="../resource/mens-outerwear/10-14154B.jpg">
+            </div>
+
+            <div class="single-item-details">
+                <div class="single-item-title">Men's Tech Shell Full-Zip</div>
+                <div class="single-item-price">$50.20</div>
+
+                <div class="selections">
+
+                    <div class="size-picker">
+                        <label class="single-item-size-label">Size</label>
+                        <select class="size-check">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+
+                    <div class="quantity-picker">
+                        <label class="single-item-quantity-label">Quantity</label>
+                        <select class="quantity">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="item-description-title">Description</div>
+                <p class="item-description">A versatile full-zip that you can wear all day long and even to the gym. This technical shell features moisture-wicking fabric, added stretch and a hidden pocket for your smartphone or media player. 
+                </p>
+                <div class="feature-title">Features:</div>
+                <ul class="feature-list">
+                    <li>
+                        100% polyster.
+                    </li>
+                    <li>
+                        Smooth, technical front with textured mesh back.
+                    </li>
+                    <li>
+                        Drawstring bottom for adjustable fit.
+                    </li>
+                    <li>
+                        Raglan sleeves.
+                    </li>
+                    <li>
+                        Available in forest green with the white Google logo embroidered at left chest. 
+                    </li>
+                </ul>
+
+                <div class="add-cart-class">
+                    <a href="./cart.html" class="add-cart">ADD TO CART</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a class="mob-btn" href="./cart.html">
+        <span>ADD TO CART</span></a>
+   </div>
+</body>
+</html>
