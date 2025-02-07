@@ -3,7 +3,7 @@
 *{
     padding: 0%;
     margin: 0px;
-    font-family: "Roboto", serif;
+    font-family: 'Roboto', 'Noto', sans-serif;
 }
 
 body{
@@ -50,6 +50,13 @@ a{
     justify-content: center;
     height: 100%;
     width: 10%;
+}
+
+.shop-name{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 5px;
+    cursor: pointer;
 }
 
 #checkbox{
@@ -165,13 +172,14 @@ a{
         flex-direction: column;
         width: 100%;
     }
-    
 
-    .shop-name{
-        text-decoration: none;
-        color: black;
-        letter-spacing: 5px;
-        cursor: pointer;
+    .outfit-img {
+        width: 100%;
+        aspect-ratio: 1.5;
+        font-size: 13px;
+        line-height:1.5;
+        object-fit: cover;
+        background-color: #ddd;
     }
 
     .cart{
@@ -327,7 +335,6 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
 }
 
 /* Outfit image */
@@ -344,7 +351,7 @@ a{
 .outfit-name {
     padding-top: 15px;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
     color: #333;
     text-align: center;
 }
@@ -357,9 +364,33 @@ a{
 
 @media (max-width : 767px) {
 
+    .outfit-name {
+        padding-top: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        text-align: center;
+    }
+
+    .outfit-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        font-size: 13px;
+        object-fit: cover;
+        background-color: #ddd;
+    }
+
+    .card-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 5px;
+        margin-bottom: 25px;
+    }
+
     .grid{
-        width: 90%;
-        padding-inline: 5%;
+        width: 100%;
+        padding-inline: 5px;
         padding-top: 10px;
         display: grid;
         grid-template-columns: repeat(2, 45%);

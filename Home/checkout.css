@@ -1,7 +1,11 @@
 .main-container {
-    height: 175vh;
-    width: 80%;
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 4vw;
+    width: 92vw;
+    padding-bottom: 5vh;
 }
 
 .checkout {
@@ -51,7 +55,7 @@
     position: absolute;
     color: rgb(135, 134, 134);
     left: 0;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .input-label input:focus+label {
@@ -83,6 +87,7 @@
 
 .state-pin {
     display: flex;
+    gap:5%;
 }
 
 #state {
@@ -151,9 +156,11 @@
 }
 
 .cvv-num {
+    position: relative;
     display: flex;
-    bottom: -15px;
+    align-items: center;
     width: 33%;
+    top:35%;
 }
 
 #expiry[name="expiry-month"] {
@@ -234,6 +241,32 @@
 .billing input {
     outline: 2px solid black;
 }
+
+@media (max-width:767px){
+    .order-btn{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 23px; 
+        bottom: -10%;
+        left: 0px;
+        height: 60px;
+        width: 100vw;
+        background:rgb(23, 44, 80);
+        color: white;
+    }
+
+    .order-button{
+        display: block;
+        position: relative;
+        top:-15%;
+        height: 5%;
+        width: 100%;
+        color: white;
+    }
+}
+
 
 @media (min-width:768px) {
     .main-container {
